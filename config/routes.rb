@@ -1,5 +1,7 @@
 TalkingHandsApp::Application.routes.draw do
 
+  devise_for :views
+
   resources :mentions
   resources :messages
 

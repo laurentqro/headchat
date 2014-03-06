@@ -1,4 +1,5 @@
 class MentionsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /mentions
   # GET /mentions.json
   def index
