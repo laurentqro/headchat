@@ -13,12 +13,17 @@ class Message < ActiveRecord::Base
     history_hash = JSON.parse(history_string)
     messages = history_hash.first[1]
     messages.each do |message|
+
+    User.create name: message['from']['name'], email: "#{message['from']['name'].strip.downcase}@wdi4.com", password: "password", password_confirmation: "password" unless User.exists?(name: message['from']['name'])
+
       Message.create(
         date: message['date'],
         user_id: User.where(name: message['from']['name']).first.id,
         body: message['message']
         )
-    end 
+    end
   end
 
 end
+
+
