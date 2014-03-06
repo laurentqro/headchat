@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @mention.user_id %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @mention.message_id %>
+</p>
+
+<p>
+  <b>Tagged user:</b>
+  <%= @mention.tagged_user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_mention_path(@mention) %> |
+<%= link_to 'Back', mentions_path %>
