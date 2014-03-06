@@ -1,6 +1,6 @@
 class Message < ActiveRecord::Base
 
-  attr_accessible :body, :user_id
+  attr_accessible :body, :user_id, :date
 
   belongs_to :user
 
@@ -14,7 +14,7 @@ class Message < ActiveRecord::Base
     messages = history_hash.first[1]
     messages.each do |message|
 
-    User.create name: message['from']['name'], email: "#{message['from']['name'].strip.downcase}@wdi4.com", password: "password", password_confirmation: "password" unless User.exists?(name: message['from']['name'])
+    User.create name: message['from']['name'], email: "#{message['from']['name'].gsub(/ /, "").downcase}@wdi4.com", password: "password", password_confirmation: "password" unless User.exists?(name: message['from']['name'])
 
       Message.create(
         date: message['date'],
