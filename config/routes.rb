@@ -1,5 +1,7 @@
 TalkingHandsApp::Application.routes.draw do
 
+  get "/users/:id", to: 'users#show', as: 'user_messages'
+
   devise_for :views
 
   resources :mentions
