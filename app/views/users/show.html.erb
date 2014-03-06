@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Messages:</b>
+  <% @user.messages.each do |message| %>
+  <%= message.body %> |
+  <%= message.date %><br>
+  <% end %>
+</p>
+
+<%= link_to 'New Message', new_message_path %> |
+<%= link_to 'Back', messages_path %>

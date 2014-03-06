@@ -11,9 +11,10 @@
 
 <% @messages.each do |message| %>
   <tr>
-    <td><%= message.body %></td>
-    <td><%= message.user.name %></td>
-    <td><%= link_to 'Show', message %></td>
+    <td><%= link_to message.body, message %></td>
+    <td><%= link_to message.user.name, user_path(message.user_id) %></td>
+    <td><%= link_to 'Mark as quote', message_path(:id => message.id, :message => {:quote => "true"}), :method => :put %></td>
+    <td><%= link_to 'Mark as unquote', message_path(:id => message.id, :message => {:quote => "false"}), :method => :put %></td>
     <td><%= link_to 'Edit', edit_message_path(message) %></td>
     <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
@@ -21,5 +22,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New Message', new_message_path %>
