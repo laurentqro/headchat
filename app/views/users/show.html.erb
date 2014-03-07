@@ -1,20 +1,58 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-
-<p>
-  <b>Messages:</b>
+<div class="message">
   <% @user.messages.each do |message| %>
     <% if message.quote == true %>
-      <%= message.body %> |
-      <%= message.date %><br>
+      <%= message.body %><br>
     <% end %>
   <% end %>
-</p>
+  <%= render 'shared/form' %>
+</div>
 
-<%= render 'shared/form' %>
+<div class="user_profile">
 
-<%= link_to 'Back', messages_path %>
+  <% if @user.name == "Tim Elder" %>
+    <img src="/tim.svg">
+  <% elsif @user.name == "Michael Pavling" %>
+    <img src="/michael.svg">
+  <% elsif @user.name == "Nikolas Mantis" %>
+    <img src="/nikolas.svg">
+  <% elsif @user.name == "Alex Pounds" %>
+    <img src="/alex.svg">
+  <% elsif @user.name == "Mark Randhawa" %>
+    <img src="/mark.svg">
+  <% elsif @user.name == "Imran Sulemanji" %>
+    <img src="/imran.svg">
+  <% elsif @user.name == "Kriszta Matyi" %>
+    <img src="/kriszta.svg">
+  <% elsif @user.name == "Clemens Kazda" %>
+    <img src="/clems.svg">
+  <% elsif @user.name == "Issam Sultan" %>
+    <img src="/issam.svg">
+  <% elsif @user.name == "Max Norton" %>
+    <img src="/maxn.svg">
+  <% elsif @user.name == "Richill Tamakloe" %>
+    <img src="/richill.svg">
+  <% elsif @user.name == "Andy Born" %>
+    <img src="/andy.svg">
+  <% elsif @user.name == "Laurent Curau" %>
+    <img src="/laurent.svg">
+  <% elsif @user.name == "Jonny Adshead" %>
+    <img src="/jonny.svg">
+  <% elsif @user.name == "Nico Castro" %>
+    <img src="/richill.svg">
+  <% elsif @user.name == "Thomas Martin" %>
+    <img src="/michael.svg">
+  <% elsif @user.name == "Max Perchik" %>
+    <img src="/michael.svg">
+  <% elsif @user.name == "Paul Lainchbury" %>
+    <img src="/michael.svg">
+  <% end %>
+
+  <div class="name">
+    <%= @user.name %>
+  </div>
+
+  <%= link_to 'Back', messages_path %>
+
+</div>
