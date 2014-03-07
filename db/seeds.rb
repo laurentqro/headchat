@@ -32,3 +32,25 @@ students = [
 students.each do |student|
   User.create name: student[:name], email: student[:email], password: student[:password], password_confirmation: student[:password_confirmation]
 end
+
+start_date = Date.parse('2013-12-16')
+end_date = Date.today
+
+start_date.upto(end_date) do |date|
+  history_string = room.history(date: date, timezone: 'GMT')
+  history_hash = JSON.parse(history_string)
+  messages = history_hash.first[1]
+
+  messages.each do |message|
+
+    User.create name: message['from']['name'], email: "#{message['from']['name'].gsub(/ /, "").downcase}@wdi4.com", password: "password", password_confirmation: "password" unless User.exists?(name: message['from']['name'])
+
+      Message.create(
+        date: message['date'],
+        user_id: User.where(name: message['from']['name']).first.id,
+        body: message['message']
+        )
+    end
+  end
+  sleep(5)
+end
