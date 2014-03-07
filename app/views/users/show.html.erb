@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Messages:</b>
+  <% @user.messages.each do |message| %>
+    <% if message.quote == true %>
+      <%= message.body %> |
+      <%= message.date %><br>
+    <% end %>
+  <% end %>
+</p>
+
+<%= render 'shared/form' %>
+
+<%= link_to 'Back', messages_path %>

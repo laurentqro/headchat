@@ -1,13 +1,13 @@
 TalkingHandsApp::Application.routes.draw do
 
-  get "/users/:id", to: 'users#show', as: 'user_messages'
+  devise_for :users
 
   devise_for :views
 
   resources :mentions
   resources :messages
 
-  devise_for :users
+  get "/users/:id", to: 'users#show', as: 'user'
 
   root :to => "home#index"
 

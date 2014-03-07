@@ -1,6 +1,6 @@
 class Message < ActiveRecord::Base
 
-  attr_accessible :body, :user_id, :date
+  attr_accessible :body, :user_id, :date, :quote
 
   belongs_to :user
 
