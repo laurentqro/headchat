@@ -4,10 +4,8 @@ class Message < ActiveRecord::Base
 
   belongs_to :user
 
-  API_TOKEN = "4804a586d045024f80e57c088e2295" # TO DO : put in ENV variable
-
   def self.fetch_history
-    client = HipChat::Client.new(API_TOKEN)
+    client = HipChat::Client.new(ENV['API_TOKEN'])
     room = client.rooms.select { |room| room.name.include?("WDI London December 2013") }.first
     history_string = room.history()
     history_hash = JSON.parse(history_string)
