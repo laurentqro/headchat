@@ -186,7 +186,7 @@
       <%= User.where(name: "Nico Castro").first.messages.last.body %>
     <% end %>
   </div>
-  <img src="richill.svg">
+  <img src="nico.svg">
   <% if User.where(name: "Nico Castro").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Nico Castro").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %> 

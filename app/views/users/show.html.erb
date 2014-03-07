@@ -1,11 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+
 <div class="message">
+  <h1 id="user_page_top"><%= @user.name %> said:</h1>
   <% @user.messages.each do |message| %>
     <% if message.quote == true %>
-      <%= message.body %><br>
+      <p class="quote"><%= message.body %></p>
     <% end %>
   <% end %>
+  <hr>
+  <h3>Add a new quote for this person:</h3>
   <%= render 'shared/form' %>
 </div>
 
@@ -40,7 +44,7 @@
   <% elsif @user.name == "Jonny Adshead" %>
     <img src="/jonny.svg">
   <% elsif @user.name == "Nico Castro" %>
-    <img src="/richill.svg">
+    <img src="/nico.svg">
   <% elsif @user.name == "Thomas Martin" %>
     <img src="/michael.svg">
   <% elsif @user.name == "Max Perchik" %>
@@ -53,6 +57,8 @@
     <%= @user.name %>
   </div>
 
-  <%= link_to 'Back', messages_path %>
+  <div class="back">
+    <%= link_to 'Back', messages_path %>
+  </div>
 
 </div>

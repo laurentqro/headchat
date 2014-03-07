@@ -1,7 +1,6 @@
 <%= form_for Message.new do |f| %>
 
   <div class="field">
-    <%= f.label :body, :value => "Add quote" %><br />
     <%= f.text_area :body %>
   </div>
   <div class="field">
@@ -10,7 +9,7 @@
   <div class="field">
     <%= f.hidden_field :quote, :value => 'true' %>
   </div>
-  <div class="actions">
+  <div class="actions" id="submit_btn">
     <%= f.submit %>
   </div>
 <% end %>

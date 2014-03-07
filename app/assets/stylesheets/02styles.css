@@ -7,7 +7,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #aaa;
+  color: white;
+}
+
+a:visited, a:hover {
+  color: white;
 }
 
 header {
@@ -32,6 +36,10 @@ header a {
   margin-right: 15px;
   float: right;
   display: inline-block;
+}
+
+#signin_corner a, #signin_corner a:hover, #signin_corner a:visited {
+  color: white;
 }
 
 #container {
@@ -64,7 +72,7 @@ header a {
 }
 
 .tile_user {
-  padding: 10px 10px 9px 16px;
+  padding: 12px 10px 8px 16px;
   /*background-color: #FF5842;*/
   background-color: #4A0E39;
   color: white;
@@ -76,6 +84,15 @@ header a {
   font-family: 'blackoutmidnight', sans-serif;
 }
 
+.tile_user a {
+  text-decoration: none;
+  color: white;
+}
+
+.tile_user a:visited, .tile_user a:hover {
+  color: white;
+}
+
 .tile button {
   border: none;
   /*background-color: #22A8B5;*/
@@ -83,17 +100,28 @@ header a {
   color: white;
   text-align: center;
   padding-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 11px;
   width: 40%;
   font-size: 15px;
   display: inline;
   float: right;
 }
 
+.tile button a {
+  text-decoration: none;
+  color: white;
+}
+
+.tile button a:visited, .tile button a:hover {
+  color: white;
+}
+
+
 .content_box {
+  padding: 20px 0 0 0;
   background-color: white;
   width: 220px;
-  height: 120px;
+  height: 100px;
   margin-left: 40px;
   margin-top: 23px;
   overflow-y: scroll;
@@ -113,6 +141,7 @@ header a {
 .user_profile .name {
   padding: 10px 10px 9px 16px;
   /*background-color: #FF5842;*/
+  line-height: 1.2em;
   background-color: #4A0E39;
   color: white;
   font-size: 23px;
@@ -120,16 +149,68 @@ header a {
   font-family: 'blackoutmidnight', sans-serif;
   text-align: center;
   width: 140px;
-  border: 1px solid black;
+}
+
+.user_profile .back {
+  margin-top: 10px;
+  padding: 10px 10px 9px 16px;
+  /*background-color: #FF5842;*/
+  background-color: #4A0E39;
+  color: white;
+  font-size: 23px;
+  letter-spacing: 2px;
+  font-family: 'blackoutmidnight', sans-serif;
+  text-align: center;
+  width: 140px;
+}
+
+.user_profile .back a {
+  color: white;
+}
+
+.user_profile .back a:hover, .user_profile .back a:visited {
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .message {
-  width: 68%;
+  width: 70%;
   display: inline-block;
   float: right;
-  border: 1px solid black;
+}
+
+.message .quote {
+  font-size: 140%;
 
 }
+
+.field textarea {
+  height: 40px;
+  width: 400px;
+}
+
+input[type="submit"] {
+  border: none;
+  background-color: #4A0E39;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 11px;
+  width: 20%;
+  font-size: 15px;
+  display: inline;
+  float: left;
+  font-family: 'blackoutmidnight', sans-serif;
+}
+
+#user_page_top {
+  font-family: 'blackoutmidnight', sans-serif;
+}
+
+h3 {
+  font-family: 'blackoutmidnight', sans-serif;
+}
+
 
 
 
