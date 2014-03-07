@@ -92,10 +92,10 @@ header a {
 
 .content_box {
   background-color: white;
-  width: 233px;
-  height: 125px;
-  margin-left: 35px;
-  margin-top: 19px;
+  width: 220px;
+  height: 120px;
+  margin-left: 40px;
+  margin-top: 23px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
