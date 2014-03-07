@@ -100,6 +100,37 @@ header a {
   overflow-x: hidden;
 }
 
+.user_profile {
+  margin-left: 20px;
+  width: 20%;
+  display: inline-block;
+}
+
+.user_profile img {
+  width: 60%;
+}
+
+.user_profile .name {
+  padding: 10px 10px 9px 16px;
+  /*background-color: #FF5842;*/
+  background-color: #4A0E39;
+  color: white;
+  font-size: 23px;
+  letter-spacing: 2px;
+  font-family: 'blackoutmidnight', sans-serif;
+  text-align: center;
+  width: 140px;
+  border: 1px solid black;
+}
+
+.message {
+  width: 68%;
+  display: inline-block;
+  float: right;
+  border: 1px solid black;
+
+}
+
 
 
 

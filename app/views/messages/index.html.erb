@@ -8,7 +8,7 @@
   <% if User.where(name: "Tim Elder").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Tim Elder").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  <div class="tile_user"><%= link_to 'Tim', user_path(User.where(id: "6")) %></div>
+  <div class="tile_user"><%= link_to 'Tim', user_path(User.where(name: "Tim Elder").first.id) %></div>
 </div>
 
 <div id="tile1B" class='tile'>
@@ -21,7 +21,7 @@
   <% if User.where(name: "Michael Pavling").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Michael Pavling").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  <div class="tile_user"><%= link_to 'Michael', user_path(User.where(id: "3")) %></div>
+  <div class="tile_user"><%= link_to 'Michael', user_path(User.where(name: "Michael Pavling").first.id) %></div>
 </div>
 
 <div id="tile1C" class='tile'>
@@ -34,7 +34,7 @@
   <% if User.where(name: "Nikolas Mantis").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Nikolas Mantis").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  <div class="tile_user"><%= link_to 'Nikolas', user_path(User.where(id: "5")) %></div>
+  <div class="tile_user"><%= link_to 'Nikolas', user_path(User.where(name: "Nikolas Mantis").first.id) %></div>
 </div>
 
 <div id="tile1D" class='tile'>
@@ -47,7 +47,7 @@
   <% if User.where(name: "Alex Pounds").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Alex Pounds").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  <div class="tile_user"><%= link_to 'Alex', user_path(User.where(id: "2")) %></div>
+  <div class="tile_user"><%= link_to 'Alex', user_path(User.where(name: "Alex Pounds").first.id) %></div>
 </div>
 
 <div id="tile2A" class='tile'>
@@ -60,7 +60,7 @@
   <% if User.where(name: "Mark Randhawa").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Mark Randhawa").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  <div class="tile_user"><%= link_to 'Mark', user_path(User.where(id: "8")) %></div>
+  <div class="tile_user"><%= link_to 'Mark', user_path(User.where(name: "Mark Randhawa").first.id) %></div>
 </div>
 
 <div id="tile2B" class='tile'>
@@ -73,7 +73,7 @@
   <% if User.where(name: "Imran Sulemanji").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Imran Sulemanji").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  <div class="tile_user"><%= link_to 'Imran', user_path(User.where(id: "13")) %></div>
+  <div class="tile_user"><%= link_to 'Imran', user_path(User.where(name: "Imran Sulemanji").first.id) %></div>
 </div>
 
 <div id="tile2C" class='tile'>
@@ -86,7 +86,7 @@
   <% if User.where(name: "Kriszta Matyi").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Kriszta Matyi").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  <div class="tile_user"><%= link_to 'Kriszta', user_path(User.where(id: "10")) %></div>
+  <div class="tile_user"><%= link_to 'Kriszta', user_path(User.where(name: "Kriszta Matyi").first.id) %></div>
 </div>
 
 <div id="tile2D" class='tile'>
@@ -99,7 +99,7 @@
   <% if User.where(name: "Clemens Kazda").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Clemens Kazda").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  <div class="tile_user"><%= link_to 'Clems', user_path(User.where(id: "11")) %></div>
+  <div class="tile_user"><%= link_to 'Clems', user_path(User.where(name: "Clemens Kazda").first.id) %></div>
 </div>
 
 <div id="tile3A" class='tile'>
@@ -112,7 +112,7 @@
   <% if User.where(name: "Issam Sultan").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Issam Sultan").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  <div class="tile_user"><%= link_to 'Issam', user_path(User.where(id: "19")) %></div>
+  <div class="tile_user"><%= link_to 'Issam', user_path(User.where(name: "Issam Sultan").first.id) %></div>
 </div>
 
 <div id="tile3B" class='tile'>
@@ -124,9 +124,8 @@
   <img src="maxn.svg">
   <% if User.where(name: "Max Norton").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Max Norton").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
-  <% end %>
-  
-  <div class="tile_user"><%= link_to 'Max N.', user_path(User.where(id: "14")) %></div>
+  <% end %> 
+  <div class="tile_user"><%= link_to 'Max N.', user_path(User.where(name: "Max Norton").first.id) %></div>
 </div>
 
 <div id="tile3C" class='tile'>
@@ -135,14 +134,11 @@
       <%= User.where(name: "Richill Tamakloe").first.messages.last.body %>
     <% end %>
   </div>
-
   <img src="richill.svg">
-
   <% if User.where(name: "Richill Tamakloe").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Richill Tamakloe").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  
-  <div class="tile_user"><%= link_to 'Richill', user_path(User.where(id: "18")) %></div>
+  <div class="tile_user"><%= link_to 'Richill', user_path(User.where(name: "Richill Tamakloe").first.id) %></div>
 </div>
 
 <div id="tile3D" class='tile'>
@@ -151,14 +147,11 @@
       <%= User.where(name: "Andy Born").first.messages.last.body %>
     <% end %>
   </div>
-
   <img src="andy.svg">
-
   <% if User.where(name: "Andy Born").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Andy Born").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
-  <% end %>
-  
-  <div class="tile_user"><%= link_to 'Andy', user_path(User.where(id: "16")) %></div>
+  <% end %>  
+  <div class="tile_user"><%= link_to 'Andy', user_path(User.where(name: "Andy Born").first.id) %></div>
 </div>
 
 <div id="tile4A" class='tile'>
@@ -167,14 +160,11 @@
       <%= User.where(name: "Laurent Curau").first.messages.last.body %>
     <% end %>
   </div>
-
   <img src="laurent.svg">
-
   <% if User.where(name: "Laurent Curau").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Laurent Curau").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  
-  <div class="tile_user"><%= link_to 'Laurent', user_path(User.where(id: "17")) %></div>
+  <div class="tile_user"><%= link_to 'Laurent', user_path(User.where(name: "Laurent Curau").first.id) %></div>
 </div>
 
 <div id="tile4B" class='tile'>
@@ -183,14 +173,11 @@
       <%= User.where(name: "Jonny Adshead").first.messages.last.body %>
     <% end %>
   </div>
-
   <img src="jonny.svg">
-
   <% if User.where(name: "Jonny Adshead").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Jonny Adshead").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  
-  <div class="tile_user"><%= link_to 'Jonny', user_path(User.where(id: "4")) %></div>
+  <div class="tile_user"><%= link_to 'Jonny', user_path(User.where(name: "Jonny Adshead").first.id) %></div>
 </div>
 
 <div id="tile4C" class='tile'>
@@ -199,14 +186,11 @@
       <%= User.where(name: "Nico Castro").first.messages.last.body %>
     <% end %>
   </div>
-
   <img src="richill.svg">
-
   <% if User.where(name: "Nico Castro").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Nico Castro").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
-  <% end %>
-  
-  <div class="tile_user"><%= link_to 'Nico', user_path(User.where(id: "9")) %></div>
+  <% end %> 
+  <div class="tile_user"><%= link_to 'Nico', user_path(User.where(name: "Nico Castro").first.id) %></div>
 </div>
 
 <div id="tile4D" class='tile'>
@@ -215,14 +199,11 @@
       <%= User.where(name: "Thomas Martin").first.messages.last.body %>
     <% end %>
   </div>
-
   <img src="michael.svg">
-
   <% if User.where(name: "Thomas Martin").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Thomas Martin").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  
-  <div class="tile_user"><%= link_to 'Tom', user_path(User.where(id: "12")) %></div>
+  <div class="tile_user"><%= link_to 'Tom', user_path(User.where(name: "Thomas Martin").first.id) %></div>
 </div>
 
 <div id="tile5A" class='tile'>
@@ -231,14 +212,11 @@
       <%= User.where(name: "Max Perchik").first.messages.last.body %>
     <% end %>
   </div>
-
   <img src="michael.svg">
-
   <% if User.where(name: "Max Perchik").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Max Perchik").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  
-  <div class="tile_user"><%= link_to 'Max P.', user_path(User.where(id: "15")) %></div>
+  <div class="tile_user"><%= link_to 'Max P.', user_path(User.where(name: "Max Perchik").first.id) %></div>
 </div>
 
 <div id="tile5B" class='tile'>
@@ -247,12 +225,9 @@
       <%= User.where(name: "Paul Lainchbury").first.messages.last.body %>
     <% end %>
   </div>
-
   <img src="michael.svg">
-
   <% if User.where(name: "Paul Lainchbury").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Paul Lainchbury").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
-  
-  <div class="tile_user"><%= link_to 'Paul', user_path(User.where(id: "7")) %></div>
+  <div class="tile_user"><%= link_to 'Paul', user_path(User.where(name: "Paul Lainchbury").first.id) %></div>
 </div>
