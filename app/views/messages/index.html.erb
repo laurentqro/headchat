@@ -1,24 +1,144 @@
-<h1>Listing messages</h1>
 
-<table>
-  <tr>
-    <th>Body</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @messages.each do |message| %>
-  <tr>
-    <td><%= link_to message.body, message %></td>
-    <td><%= link_to message.user.name, user_path(message.user_id) %></td>
-    <td><%= link_to 'Mark as quote', message_path(:id => message.id, :message => {:quote => "true"}), :method => :put %></td>
-    <td><%= link_to 'Mark as unquote', message_path(:id => message.id, :message => {:quote => "false"}), :method => :put %></td>
-    <td><%= link_to 'Edit', edit_message_path(message) %></td>
-    <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+  <div id="tile1A" class='tile'>
+    <div class="content_box">
+      <%= User.where(name: "Tim Elder").first.messages.last.body %>
+    </div>
+    <img src="tim.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Tim</div>
+  </div>
 
-<br />
+
+  <div id="tile1B" class='tile'>
+    <div class="content_box"></div>
+    <img src="michael.svg">
+    <div class="tile_user">Michael</div>
+    <button>Save Quote</button>
+  </div>
+
+  <div id="tile1C" class='tile'>
+    <div class="content_box"></div>
+    <img src="nikolas.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Nikolas</div>
+  </div>
+
+  <div id="tile1D" class='tile'>
+    <div class="content_box"></div>
+    <img src="alex.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Alex</div>
+  </div>
+
+  <div id="tile2A" class='tile'>
+    <div class="content_box"></div>
+    <img src="mark.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Mark</div>
+  </div>
+
+  <div id="tile2B" class='tile'>
+    <div class="content_box"></div>
+    <img src="imran.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Imran</div>
+  </div>
+
+  <div id="tile2C" class='tile'>
+    <div class="content_box"></div>
+    <img src="kriszta.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Kriszta</div>
+  </div>
+
+  <div id="tile2D" class='tile'>
+    <div class="content_box"></div>
+    <img src="clems.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Clems</div>
+  </div>
+
+  <div id="tile3A" class='tile'>
+    <div class="content_box"></div>
+    <img src="issam.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Issam</div>
+  </div>
+
+  <div id="tile3B" class='tile'>
+    <div class="content_box"></div>
+    <img src="maxn.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Max N.</div>
+  </div>
+
+  <div id="tile3C" class='tile'>
+    <div class="content_box"></div>
+    <img src="richill.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Richill</div>
+  </div>
+
+  <div id="tile3D" class='tile'>
+    <div class="content_box"></div>
+    <img src="andy.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Andy</div>
+  </div>
+
+  <div id="tile4A" class='tile'>
+    <div class="content_box"></div>
+    <img src="laurent.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Laurent</div>
+  </div>
+
+  <div id="tile4B" class='tile'>
+    <div class="content_box"></div>
+    <img src="jonny.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Jonny</div>
+  </div>
+
+  <div id="tile4C" class='tile'>
+    <div class="content_box"></div>
+    <img src="richill.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Nico</div>
+  </div>
+
+  <div id="tile5D" class='tile'>
+    <div class="content_box"></div>
+    <img src="richill.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Tom</div>
+  </div>
+
+  <div id="tile5A" class='tile'>
+    <div class="content_box"></div>
+    <img src="richill.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Max P.</div>
+  </div>
+
+  <div id="tile5B" class='tile'>
+    <div class="content_box"></div>
+    <img src="richill.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Paul</div>
+  </div>
+
+  <div id="tile5C" class='tile'>
+    <div class="content_box"></div>
+    <img src="richill.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Jack</div>
+  </div>
+
+  <div id="tile5D" class='tile'>
+    <div class="content_box"></div>
+    <img src="richill.svg">
+    <button>Save Quote</button>
+    <div class="tile_user">Jack</div>
+  </div>
