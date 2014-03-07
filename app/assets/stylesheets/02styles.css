@@ -1,0 +1,108 @@
+
+body {
+  /*background-color: #6F72A3;*/
+/*  background-color: #409C91;*/
+  background-color: #F7ECC9;
+}
+
+a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+header {
+  background-color: #4A0E39;
+  height: 100px;
+  color: white;
+}
+
+header a {
+  color: white;
+}
+
+#logo {
+  margin-top: 18px;
+  margin-left: 15px;
+  float: left;
+  display: inline-block;
+}
+
+#signin_corner {
+  margin-top: 40px;
+  margin-right: 15px;
+  float: right;
+  display: inline-block;
+}
+
+#container {
+  max-width: 1420px;
+  margin: 0 auto;
+}
+
+.tile {
+  width: 300px;
+  height: 300px;
+  background-color: #A3D99C;
+  background-image: url("tile_bg.png");
+  display: inline-block;
+  float: left;
+  margin: 25px;
+  margin-bottom: 40px;
+}
+
+.tile:nth-child(1), .tile:nth-child(3), .tile:nth-child(6), .tile:nth-child(8), .tile:nth-child(9), .tile:nth-child(12), .tile:nth-child(14), .tile:nth-child(15), .tile:nth-child(17), .tile:nth-child(19) {
+  background-color: #61C7A0;
+}
+
+.tile img {
+  margin-top: 16px;
+  margin-bottom: 5px;
+  margin-left: 6px;
+  width: 70px;
+  height: 98px;
+  display: block;
+}
+
+.tile_user {
+  padding: 10px 10px 9px 16px;
+  /*background-color: #FF5842;*/
+  background-color: #4A0E39;
+  color: white;
+  display: inline;
+  font-size: 23px;
+  letter-spacing: 2px;
+  float: left;
+  width: 50.2%;
+  font-family: 'blackoutmidnight', sans-serif;
+}
+
+.tile button {
+  border: none;
+  /*background-color: #22A8B5;*/
+  background-color: #4A0E39;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 40%;
+  font-size: 15px;
+  display: inline;
+  float: right;
+}
+
+.content_box {
+  background-color: white;
+  width: 220px;
+  height: 120px;
+  margin-left: 40px;
+  margin-top: 23px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
