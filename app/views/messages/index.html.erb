@@ -212,7 +212,7 @@
       <%= User.where(name: "Max Perchik").first.messages.last.body %>
     <% end %>
   </div>
-  <img src="michael.svg">
+  <img src="maxp.svg">
   <% if User.where(name: "Max Perchik").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Max Perchik").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>
@@ -225,7 +225,7 @@
       <%= User.where(name: "Paul Lainchbury").first.messages.last.body %>
     <% end %>
   </div>
-  <img src="michael.svg">
+  <img src="paul.svg">
   <% if User.where(name: "Paul Lainchbury").first.messages.exists? %>
     <button><%= link_to 'Save Quote', message_path(:id => User.where(name: "Paul Lainchbury").first.messages.last.id, :message => {:quote => "true"}), :method => :put %></button>
   <% end %>

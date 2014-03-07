@@ -44,7 +44,6 @@ class Message < ActiveRecord::Base
   #     messages.each do |message|
 
   #       User.create name: message['from']['name'], email: "#{message['from']['name'].gsub(/ /, "").downcase}@wdi4.com", password: "password", password_confirmation: "password" unless User.exists?(name: message['from']['name'])
-
   #       Message.create(
   #         date: message['date'],
   #         user_id: User.where(name: message['from']['name']).first.id,
@@ -54,6 +53,7 @@ class Message < ActiveRecord::Base
   #     sleep(5)
   #   end
   # end
+
 end
 
 
