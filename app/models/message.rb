@@ -48,6 +48,11 @@ class Message < ActiveRecord::Base
       sleep(5)
     end
   end
+
+  def parse_mentions
+    /\@[a-zA-Z]+/.match(self.body)
+  end
+
 end
 
 

@@ -1,7 +1,6 @@
-
 body {
   /*background-color: #6F72A3;*/
-/*  background-color: #409C91;*/
+  /*  background-color: #409C91;*/
   background-color: #F7ECC9;
 }
 
@@ -116,7 +115,6 @@ header a {
   color: white;
 }
 
-
 .content_box {
   padding: 20px 0 0 0;
   background-color: white;
@@ -173,10 +171,18 @@ header a {
   background-color: rgba(255, 255, 255, 0);
 }
 
-.message {
+#messages_container {
   width: 70%;
+  max-height: 500px;
   display: inline-block;
   float: right;
+}
+
+.message {
+  width: 90%;
+  height: 460px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .message .quote {
@@ -209,6 +215,12 @@ input[type="submit"] {
 
 h3 {
   font-family: 'blackoutmidnight', sans-serif;
+}
+
+hr {
+  float: left;
+  width: 90%;
+  margin: 20px 0 0 0;
 }
 
 

@@ -1,16 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-
-<div class="message">
-  <h1 id="user_page_top"><%= @user.name %> said:</h1>
-  <% @user.messages.each do |message| %>
-    <% if message.quote == true %>
-      <p class="quote"><%= message.body %></p>
+<div id="messages_container">
+  <div class="message">
+    <h1 id="user_page_top"><%= @user.name %> said:</h1>
+    <% @user.messages.each do |message| %>
+      <% if message.quote == true %>
+        <p class="quote"><%= message.body %></p>
+      <% end %>
     <% end %>
-  <% end %>
-  <hr>
-  <h3>Add a new quote for this person:</h3>
-  <%= render 'shared/form' %>
+  </div>
+  <div id="form">
+    <hr><br>
+    <h3>Add a new quote for this person:</h3>
+    <%= render 'shared/form' %>
+  </div>
 </div>
 
 <div class="user_profile">

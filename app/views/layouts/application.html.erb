@@ -9,7 +9,7 @@
 <body>
 
 <header>
-<div id="logo"><img src="/logo1.png"></div>
+<div id="logo"><%= link_to image_tag('/logo1.png'), messages_path %></div>
 
 <div id="signin_corner">
   <% if current_user %>
