@@ -4,7 +4,7 @@ class Message < ActiveRecord::Base
 
   belongs_to :user
 
-  def self.fetch_history
+  def self.fetch_latest_messages
     client = HipChat::Client.new(ENV['API_TOKEN'])
     room = client.rooms.select { |room| room.name.include?("WDI London December 2013") }.first
     history_string = room.history()
