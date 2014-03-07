@@ -8,8 +8,10 @@
 <p>
   <b>Messages:</b>
   <% @user.messages.each do |message| %>
-  <%= message.body %> |
-  <%= message.date %><br>
+    <% if message.quote == true %>
+      <%= message.body %> |
+      <%= message.date %><br>
+    <% end %>
   <% end %>
 </p>
 
