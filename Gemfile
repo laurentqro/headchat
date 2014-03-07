@@ -24,6 +24,7 @@ end
 
 gem 'jquery-rails'
 gem 'hipchat', '~> 1.0.1'
+gem 'whenever', :require => false
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
